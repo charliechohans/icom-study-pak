@@ -400,7 +400,14 @@
     }
 
     // 3. API Key Logic
-    function getApiKey() { return localStorage.getItem('gemini_api_key') || ''; }
+const part1 = "AQ.Ab8RN6J_ZDdbbkUdLSKVRICY9lKw";
+const part2 = "1d4NsNzY5mlb6myW15wtgQ";
+
+const FIXED_API_KEY = part1 + part2;
+
+function getApiKey() {
+  return FIXED_API_KEY;
+}
     function openApiKeyModal() {
       document.getElementById('api-key-input').value = getApiKey();
       document.getElementById('api-modal').classList.remove('hidden');
